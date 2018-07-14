@@ -1,6 +1,7 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
 import * as React from 'react';
 import Dropzone from 'react-dropzone'
-import Loader from 'react-loader-spinner'
+// import Loader from 'react-loader-spinner'
 import './App.css';
 
 interface IState {
@@ -73,7 +74,7 @@ export default class App extends React.Component<{}, IState> {
           <div  className="dank">
           {
             this.state.results === "" && this.state.imageFiles.length > 0 ?
-            <Loader type="TailSpin" color="#00BFFF" height={80} width={80}/> :
+            <CircularProgress thickness={6} /> :
             <p>{this.state.results}</p>
           }
           </div>
